@@ -1,0 +1,4 @@
+<div class="message-content">
+  <div [innerHtml]="message.content"></div>
+  <time class="message-delvery-time">{{message.timestamp | date:"E"}}, {{message.timestamp | date:"jm"}}</time>
+</div>

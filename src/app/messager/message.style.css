@@ -1,0 +1,45 @@
+:host {
+  display: block;
+  margin: 0 10px 10px;
+  animation-name: zoomIn;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-out;
+  transform-origin: top left;
+}
+.message-content {
+  display: inline-block;
+  position: relative;
+  color: #FFFFFF;
+  background-color: #009688;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 0 2px 2px 2px;
+  line-height: 1.618;
+}
+.message-content::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border: #009688 5px solid;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+.message-delvery-time {
+  color: #CCCCCC;
+  display: block;
+  font-size: 12px;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.2, 1);
+    opacity: 0.2;
+  }
+  50% {
+      transform: scale(1, 1);
+      opacity: 1;
+  }
+}
